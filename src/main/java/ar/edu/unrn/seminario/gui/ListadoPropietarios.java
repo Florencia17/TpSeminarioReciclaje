@@ -57,7 +57,9 @@ public class ListadoPropietarios extends JFrame {
         contentPane.add(scrollPane);
 
         table = new JTable();
-        String[] titulos = { "NOMBRE", "APELLIDO", "DNI" };
+        String[] titulos = { labels.getString("listado.propietarios.titulo.nombre"),
+                labels.getString("listado.propietarios.titulo.apellido"),
+                labels.getString("listado.propietarios.titulo.dni")};
 
         modelo = new DefaultTableModel(new Object[][] {}, titulos);
 
@@ -76,7 +78,7 @@ public class ListadoPropietarios extends JFrame {
         panel.setBounds(5, 236, 790, 35);
         contentPane.add(panel);
 
-        btnNewButton = new JButton("cerrar");
+        btnNewButton = new JButton(labels.getString("listado.propietarios.button.cerrar"));
         btnNewButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 dispose();
@@ -91,7 +93,7 @@ public class ListadoPropietarios extends JFrame {
 
 
 
-        JButton btnNewButton_1 = new JButton("Modificar");
+        JButton btnNewButton_1 = new JButton(labels.getString("listado.propietarios.button.modificar"));
         btnNewButton_1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 try {
